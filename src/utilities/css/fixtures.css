@@ -1,0 +1,50 @@
+.outer-container-fixtures .container-main-content-fixtures {
+  width: 75%;
+  margin: 14vh auto 10vh auto; }
+  .outer-container-fixtures .container-main-content-fixtures .container-card.fixtures-card {
+    padding-bottom: 3vh; }
+    .outer-container-fixtures .container-main-content-fixtures .container-card.fixtures-card .main-header {
+      /* When calling the function use for example $justify-content: null to not use this property, otherwise it will use the default */
+      /* Safari */
+      display: -webkit-flex;
+      -webkit-flex-direction: row;
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      line-height: 0;
+      padding-bottom: 2vh; }
+      .outer-container-fixtures .container-main-content-fixtures .container-card.fixtures-card .main-header.displayResults {
+        /* When calling the function use for example $justify-content: null to not use this property, otherwise it will use the default */
+        /* Safari */
+        display: -webkit-flex;
+        -webkit-flex-direction: row;
+        -webkit-justify-content: space-between;
+        -webkit-align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; }
+        .outer-container-fixtures .container-main-content-fixtures .container-card.fixtures-card .main-header.displayResults h1 {
+          flex-basis: 54%;
+          text-align: right; }
+  .outer-container-fixtures .container-main-content-fixtures .fixtures {
+    width: 100%;
+    margin-bottom: 2.5vh;
+    font-size: 85%; }
+
+.fixtures-date {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 85%;
+  background-color: lightgray;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 1vh;
+  padding: 1vh 1vw;
+  border-collapse: separate; }
+
+@media screen and (max-width: 768px) {
+  .container-main-content-fixtures {
+    width: 80%; } }

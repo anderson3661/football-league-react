@@ -1,0 +1,118 @@
+@import '../../sass/_variables';
+@import '../../sass/mixins';
+
+.fixtures-row {
+
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+
+    border-bottom: 1px solid $color-fixture-row-goal-times-bottom-border;
+
+    %teamName {
+        flex-basis: $width-fixture-row-team-name;
+        // padding-top: 1.1vh;
+        // padding-bottom: 0.8vh;
+        @include flex($justify-content: null);
+    }
+    .homeTeamsName { @extend %teamName; text-align: right; padding-right: 0.5vw; justify-content: flex-end; }
+    .awayTeamsName { @extend %teamName; text-align: left;  padding-left: 0.5vw; justify-content: flex-start; }
+
+    %teamScore { flex-basis: $width-fixture-row-team-score; }
+    .homeTeamsScore { @extend %teamScore; padding-right: 0; }
+    .awayTeamsScore { @extend %teamScore; padding-left: 0; }
+    
+    .timeOrScore {
+        @include flex($align-items: null);
+        flex-basis: $width-fixture-time-or-score;
+        text-align: center;
+        padding-top: 0.7vh;
+        padding-bottom: 0.7vh;
+
+        .timeOfFixture {
+            padding: 0.25vh 0.25vw;
+            background-color: $background-color-time-of-fixture;
+        }
+
+        &.scoresOnly {
+            justify-content: space-evenly;
+        }    
+    }
+       
+    .finalScore { @include score($color-final-score, $background-color-final-score); }
+
+    &.show-goals-hide-border-bottom {
+        border-bottom: none;        // Hioe the main bottom border if show goals is selected and the fixture has finished
+    }
+
+    &.in-play {
+        border-bottom: none;
+        min-height: 4.25vh;
+    
+        // .homeTeamsName, .awayTeamsName { padding-top: 1.2vh; padding-bottom: 1vh;}
+        .homeTeamsScore, .awayTeamsScore { padding-top: 0.25vh; }
+        .timeOrScore.timeOnly { padding-top: 1vh; }
+        
+        .activeScore { @include score($color-active-score, $background-color-active-score); }
+        .halfTimeScore { @include score($color-half-time-score, $background-color-half-time-score); }
+    }
+    
+    &.team-stats {
+        .fixtureDate { flex-basis: $width-fixture-row-team-stats-fixture-date; font-weight: normal;}
+        .homeTeamsName, .awayTeamsName { flex-basis: $width-fixture-row-team-stats-team-name; }
+    
+        .winDrawLoss {
+            flex-basis: $width-fixture-row-team-stats-win-draw-loss;
+            font-family: $font-family-league-table-form-cell;
+            color: $color-league-table-form-cell;
+            // padding-top: 1vh;
+            text-align: center;
+        }
+    
+        .result { padding: 0.25vh 0.25vw;}
+        .result.W { background-color: $color-league-table-form-cell-win; }
+        .result.D { background-color: $color-league-table-form-cell-draw; }
+        .result.L { background-color:$color-league-table-form-cell-loss; }        
+    }
+
+}
+
+.fixtures-row-goal-times {    
+    display: flex;
+    
+    font-size: $font-size-fixture-row-goal-times;
+    color: $color-fixture-row-goal-times;
+    border-bottom: 1px solid $color-fixture-row-goal-times-bottom-border;
+    
+    .teamsGoalTimes {
+        flex-basis: $width-fixture-row-goal-times;
+        white-space: pre;    /* This allows 2 spaces between goals */
+        padding-top: 0;
+        padding-bottom: 0.25vh;
+    }
+    
+    .teamsGoalTimes.home { text-align: right; padding-right: 0.25vw; }
+    .teamsGoalTimes.away { text-align: left; padding-left: 0.25vw; }
+
+    .minutesPlayed {
+        flex-basis: $width-fixture-row-goal-times-minutes-played;
+        text-align: center;
+        padding: 0 0.5vw;
+    }
+
+    &.team-stats {
+        .fixtureDate { flex-basis: $width-fixture-row-team-stats-fixture-date };
+        .teamsGoalTimes { flex-basis: $width-fixture-row-team-stats-team-name };
+        .winDrawLoss { flex-basis: $width-fixture-row-team-stats-win-draw-loss };    
+    }
+}
+
+.icon-position {
+    color: #a67c00;
+    padding-left: 0.5vw; padding-right: 1vw;
+}
+
+.iconTop3 { top: 0; left: 0; }
+.iconTop3BeforeText, .iconTop3AfterText { position: relative; }
+.iconTop3BeforeText:before, .iconTop3AfterText:after { color: #a67c00; padding-left: 0.5vw; padding-right: 1vw; }
+.iconTop3Home2nd:before, .iconTop3Away2nd:after { content: "looks_two"; }

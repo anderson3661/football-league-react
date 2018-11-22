@@ -1,0 +1,59 @@
+@mixin backgroundImage($url, $size: cover, $repeat: no-repeat, $position: center) {
+    background: $url;
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $position;
+}
+
+@mixin flex($flex-direction: row, $justify-content: center, $align-items: center) {
+    /* When calling the function use for example $justify-content: null to not use this property, otherwise it will use the default */
+
+    /* Safari */
+    display: -webkit-flex;
+    -webkit-flex-direction: $flex-direction;
+    -webkit-justify-content: $justify-content;
+    -webkit-align-items: $align-items;
+
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin score($color-score, $background-color-score) {
+    color: $color-score;
+    background-color: $background-color-score;
+    flex-basis: $width-fixture-row-team-score;
+    padding: 5px;
+}
+
+@mixin table-column($width, $fontWeight, $textAlign, $paddingLeft, $paddingRight) {
+    width: $width;
+    font-weight: $fontWeight;
+    text-align: $textAlign;
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+}
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+  
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            font-size: $min-font-size;
+            @media screen and (min-width: $min-vw) {
+                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            }
+            @media screen and (min-width: $max-vw) {
+                font-size: $max-font-size;
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+// ***************** General ****************
+$font-family-main: Arial, Helvetica, sans-serif;
+$background-color-main-body: white;
+$line-height-main-body: 1.0;
+
+
+// *************** Navigation ***************
+$background-color-main-header: radial-gradient(ellipse at center, rgba(112,131,136,1) 0%, rgba(74,86,97,1) 100%);
+$background-color-main-nav: #4C4C4C;
+$background-color-individual-sport: black;
+$background-color-active-link: #FFDF43;
+$background-color-active-sport-link: #FFDF43;
+$color-main-header: gold;
+$color-main-nav: white;
+$color-individual-sport: white;
+$color-main-nav-border-bottom: gray;
+$color-nav-border-right: white;
+$max-width-main-nav: 80%;
+$font-size-main-nav: 150%;
+
+
+// ***************** Footer *****************
+$background-color-main-footer: #4C4C4C;
+$color-main-footer: white;
+
+
+// *************** Main Content *************
+$width-main-content: 1024px;
+
+
+// **************** Fixtures ****************
+$font-family-date-of-fixtures: 'Times New Roman', Times, serif;
+
+$background-color-time-of-fixture: #e7e5e5;
+$background-color-date-of-fixtures: #F7F7F5;
+$background-color-active-score: #1f2fe4;
+$background-color-half-time-score: #c5caf0;
+$background-color-final-score: #FFDF43;
+$color-active-score: white;
+$color-half-time-score: black;
+$color-final-score: black;
+$color-fixture-row-goal-times: #888;
+$color-fixture-row-goal-times-bottom-border: #E0E0E0;
+
+$width-fixture-row-team-name: 50%;
+$width-fixture-row-goal-times: 50%;
+$width-fixture-time-or-score: 6vw;
+$width-fixture-row-goal-times-minutes-played: 6vw;
+$width-fixture-row-team-score: 1.5vw;
+
+$width-fixture-row-team-stats-fixture-date: 20%;
+$width-fixture-row-team-stats-team-name: 38%;
+$width-fixture-row-team-stats-win-draw-loss: 4%;
+
+$font-size-date-of-fixtures: 85%;
+$font-size-fixture-row-goal-times: 90%;
+
+// $line-height-table-fixtures: 1.2em;
+
+
+// ***************** Tables *****************
+$font-family-league-table-form-cell: Courier New, Courier, monospace;
+
+$background-color-league-table-header: #F7F7F5;
+$color-league-table-form-cell: white;
+$color-league-table-form-cell-win: green;
+$color-league-table-form-cell-draw: gray;
+$color-league-table-form-cell-loss: red;
+$color-league-table-movement-arrow-up: #88c480;
+$color-league-table-movement-arrow-down: #fa8787;
+$color-league-table-row-border-bottom: #e5e5e3;
+$link-color-league-table-team-name: black;
+
+$font-size-league-table-header: 100%;
+$font-size-league-table-summary: 90%;
+$font-size-league-table-form-cell: 85%;
+
+$line-height-league-table-summary: 1.3;
+
+
+// ***************** Admin ******************
+$background-color-admin-teams-header: #d5d7da;
+
+
+// ********************** Help ***********************
+$background-help-form: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, rgb(203, 203, 204) 100%);
+$color-help-form: black;
+$background-color-accordian: white;
+$border-accordian: 1px solid darkgray;                  // or 1px solid #e0e0e0;
+$background-color-accordian-title: #296e75;             // or #00b3b4;
+$color-accordian-title: white;
+$border-accordian-title: 1px solid #2b7981;             // or 1px solid #379AA4;
+$box-shadow-accordian-title: 0 1px 0 rgba(255,255,255,0.5) inset, 0 -1px 0 rgba(255,255,255,0.1) inset, 0 4px 0 #276c74, 0 4px 2px rgba(0,0,0,0.5);      // or #338A94 instead of #276c74
+$background-color-accordian-title-hover: #338A94;       // or #0bbfc0;
+$border-accordian-title-arrow:  2px solid white;
+
+
+// ********************* Contact *********************
+$background-contact-form: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, rgb(203, 203, 204) 100%);
+$color-contact-form: black;
+$color-contact-form-invalid-message: red;

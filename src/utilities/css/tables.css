@@ -1,0 +1,348 @@
+/* All tables */
+.container-main-content-tables {
+  width: 80%;
+  margin: 14vh auto 10vh auto; }
+  .container-main-content-tables .container-card.tables {
+    padding-bottom: 3vh; }
+    .container-main-content-tables .container-card.tables .main-header {
+      line-height: 0;
+      padding-bottom: 2vh; }
+
+.main-content h1 {
+  text-align: center;
+  margin-bottom: 3vh; }
+
+.league-table, .league-table-full {
+  border-collapse: collapse;
+  font-size: 85%; }
+
+.league-table-header {
+  font-size: 100%;
+  font-weight: bold;
+  line-height: 2.5;
+  background-color: lightgray; }
+
+.league-table-teamName {
+  font-family: Arial, Helvetica, sans-serif; }
+  .league-table-teamName a:link, .league-table-teamName a:visited {
+    color: black; }
+
+.league-table-form-cell {
+  font-family: Courier New, Courier, monospace;
+  font-size: 85%;
+  color: white; }
+
+.league-table-form-cell.W {
+  background-color: green; }
+
+.league-table-form-cell.D {
+  background-color: gray; }
+
+.league-table-form-cell.L {
+  background-color: red; }
+
+.league-table-row {
+  border-bottom: 1px solid #e5e5e3; }
+
+.league-table-points {
+  border-right: 1px solid #e5e5e3; }
+
+.league-table-points.showGoalUpdates {
+  border-right: 1px solid transparent; }
+
+/* Standard League Table */
+.league-table .league-table-row td {
+  padding-top: 0.8vh;
+  padding-bottom: 0.8vh; }
+
+.league-table .league-table-position {
+  width: 3%;
+  font-weight: inherit;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table .league-table-teamName {
+  width: 20%;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table .league-table-played {
+  width: 4%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table .league-table-won {
+  width: 5%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 3vw;
+  padding-right: 0; }
+
+.league-table .league-table-drawn {
+  width: 5%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table .league-table-lost {
+  width: 5%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table .league-table-goalsFor {
+  width: 5%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 4vw;
+  padding-right: 0; }
+
+.league-table .league-table-goalsAgainst {
+  width: 5%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table .league-table-goalDifference {
+  width: 5%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 4vw;
+  padding-right: 0; }
+
+.league-table .league-table-points {
+  width: 10%;
+  font-weight: bold;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 2vw; }
+
+.league-table .league-table-form-cell {
+  width: 8%;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table .league-table-form-cell {
+  padding: 0.25vh 0.25vw;
+  margin-right: 0.25vw; }
+
+.league-table .league-table-form-cell:first-child {
+  margin-left: 1.4vw; }
+
+.league-table .league-table-form-header {
+  padding-left: 1.4vw; }
+
+/* Full League Table */
+.league-table-full .league-table-row td {
+  padding-top: 0.8vh;
+  padding-bottom: 0.8vh; }
+
+.league-table-full .league-table-position {
+  width: 3%;
+  font-weight: inherit;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table-full .league-table-teamName {
+  width: 18%;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table-full .league-table-played {
+  width: 3%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table-full .league-table-won {
+  width: 3%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 3vw;
+  padding-right: 0; }
+
+.league-table-full .league-table-drawn {
+  width: 3%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table-full .league-table-lost {
+  width: 3%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table-full .league-table-goalsFor {
+  width: 4%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 2.5vw;
+  padding-right: 0; }
+
+.league-table-full .league-table-goalsAgainst {
+  width: 4%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table-full .league-table-goalDifference {
+  width: 4%;
+  font-weight: inherit;
+  text-align: right;
+  padding-left: 3vw;
+  padding-right: 0; }
+
+.league-table-full .league-table-points {
+  width: 8%;
+  font-weight: bold;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 1vw; }
+
+.league-table-full .league-table-form-cell {
+  width: 8%;
+  font-weight: inherit;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0; }
+
+.league-table-full .league-table-form-cell {
+  padding: 0.25vh 0.25vw;
+  margin-right: 0.25vw; }
+
+.league-table-full .league-table-form-cell:first-child {
+  margin-left: 1vw; }
+
+.league-table-full .league-table-form-header {
+  padding-left: 1vw; }
+
+/* In-Play League Table */
+.league-table-in-play {
+  line-height: 1.3;
+  font-size: 90%; }
+  .league-table-in-play h3 {
+    font-weight: bold;
+    margin-top: 0; }
+  .league-table-in-play .league-table-row td {
+    padding-top: 0.65vh;
+    padding-bottom: 0.65vh; }
+  .league-table-in-play .league-table-position {
+    width: 2%;
+    font-weight: inherit;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0; }
+  .league-table-in-play .league-table-movement {
+    width: 5%;
+    font-weight: inherit;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0; }
+  .league-table-in-play .league-table-teamName {
+    width: 25%;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0; }
+  .league-table-in-play .league-table-played {
+    width: 4%;
+    font-weight: inherit;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 0; }
+  .league-table-in-play .league-table-won {
+    width: 4%;
+    font-weight: inherit;
+    text-align: right;
+    padding-left: 1.5vw;
+    padding-right: 0; }
+  .league-table-in-play .league-table-drawn {
+    width: 4%;
+    font-weight: inherit;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 0; }
+  .league-table-in-play .league-table-lost {
+    width: 4%;
+    font-weight: inherit;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 0; }
+  .league-table-in-play .league-table-goalDifference {
+    width: 5%;
+    font-weight: inherit;
+    text-align: right;
+    padding-left: 2vw;
+    padding-right: 0; }
+  .league-table-in-play .league-table-points {
+    width: 10%;
+    font-weight: bold;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 2vw; }
+  .league-table-in-play .league-table-form-cell {
+    width: 10%;
+    font-weight: inherit;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0; }
+  .league-table-in-play .league-table-form-cell {
+    padding: 0.2vh 0.2vw;
+    margin-right: 0.25vw; }
+  .league-table-in-play .league-table-form-cell:first-child {
+    margin-left: 1vw; }
+  .league-table-in-play .league-table-form-header {
+    padding-left: 1vw; }
+
+.arrow-up, .arrow-down {
+  font-size: 1.1vw;
+  font-weight: bold;
+  line-height: 0.8em; }
+
+.arrow-up {
+  color: #88c480; }
+
+.arrow-down {
+  color: #fa8787; }
+
+.teamNameLink:hover {
+  text-decoration: underline; }
+
+@media screen and (max-width: 450px) {
+  .league-table .league-table-teamName, .league-table-full .league-table-teamName {
+    width: 50%;
+    padding-left: 2vw; }
+  .league-table .league-table-drawn, .league-table-full .league-table-drawn {
+    display: none; }
+  .league-table .league-table-lost, .league-table-full .league-table-lost {
+    display: none; }
+  .league-table .league-table-goalsFor, .league-table-full .league-table-goalsFor {
+    display: none; }
+  .league-table .league-table-goalsAgainst, .league-table-full .league-table-goalsAgainst {
+    display: none; }
+  .league-table .league-table-points, .league-table-full .league-table-points {
+    padding-left: 2vw; }
+  .league-table .league-table-form-cell, .league-table-full .league-table-form-cell {
+    display: none; }
+  .league-table .league-table-form-header, .league-table-full .league-table-form-header {
+    display: none; }
+  .league-table-full .league-table-won {
+    display: none; } }

@@ -1,0 +1,15 @@
+@import '../../sass/mixins';
+@import '../../sass/_variables';
+
+
+.container-home {
+    @include flex();
+    margin: 14vh auto 10vh auto;
+
+    .container-card {
+        width: 50%;
+        padding: 1vh 2vw 2vh 2vw;
+
+        h1 { margin-bottom: 3vh; }
+    }
+}

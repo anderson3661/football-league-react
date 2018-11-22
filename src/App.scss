@@ -1,0 +1,95 @@
+@import './sass/_variables';
+@import './sass/_mixins';
+
+@import './utilities/css/links.css';
+
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 18px;
+
+html {
+    box-sizing: border-box;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+*, *:before, *after {
+    box-sizing: inherit;
+}
+
+h1 {
+    font-size: 150%;
+}
+
+body {
+    background-color: $background-color-main-body;
+    font-family: Aerial;
+    margin: 0;
+    line-height: $line-height-main-body;
+}
+
+.container-main-content {
+    width: 90%;
+    // max-width: $width-main-content;
+    margin: 14vh auto 10vh auto;
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-card {
+    font-family: $font-family-main;
+    // font-size: 0.9rem;
+    color: black;
+    text-align: left;
+    // background: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, rgba(210, 210, 210, 0.95) 100%);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    // margin: 0 auto 4vh auto;
+    margin: 0 auto;
+    padding: 1vh 2vw;
+
+    h1, h2 { text-align: center; }
+
+    span {
+        font-weight: 700;
+    }
+
+    &.header {
+        width: 25%;
+        text-align: center;
+    }
+
+    ul li {
+        // font-size: 120%;
+        font-size: 100%;
+        padding: 1vh 1vw;
+    }
+}
+
+img.full-screen-background-image {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+        
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+        
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+    img.full-screen-background-image {
+      left: 50%;
+      margin-left: -512px;   /* 50% */
+    }
+}

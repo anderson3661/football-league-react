@@ -1,0 +1,54 @@
+.container-main-content-contact {
+  width: 75%;
+  margin: 15vh auto 0 auto;
+  /* When calling the function use for example $justify-content: null to not use this property, otherwise it will use the default */
+  /* Safari */
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  display: flex;
+  flex-direction: row; }
+  .container-main-content-contact .container-card {
+    width: 75%;
+    padding: 1vh 2vw 11vh 2vw; }
+    .container-main-content-contact .container-card header h1, .container-main-content-contact .container-card p {
+      text-align: center; }
+    .container-main-content-contact .container-card .contact {
+      /* When calling the function use for example $justify-content: null to not use this property, otherwise it will use the default */
+      /* Safari */
+      display: -webkit-flex;
+      -webkit-flex-direction: row;
+      -webkit-justify-content: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: flex-start; }
+      .container-main-content-contact .container-card .contact .main-form {
+        width: 65%;
+        max-height: 40vh; }
+        .container-main-content-contact .container-card .contact .main-form .contact-form {
+          width: 100%;
+          margin: 2vh auto; }
+          .container-main-content-contact .container-card .contact .main-form .contact-form .contact-form-full-width {
+            width: 100%;
+            padding: 2vh 0 0.5vh 0; }
+          .container-main-content-contact .container-card .contact .main-form .contact-form .errorMessage {
+            color: red;
+            margin: 0;
+            padding: 0; }
+        .container-main-content-contact .container-card .contact .main-form .submit-button {
+          text-align: center;
+          margin: 1vh 0; }
+        .container-main-content-contact .container-card .contact .main-form .invalid-form-message p {
+          color: red; }
+  .container-main-content-contact mat-form-field {
+    padding: 0;
+    margin: 0; }
+
+@media screen and (max-width: 1280px) and (min-width: 700px) {
+  .container-main-content-contact mat-form-field {
+    font-size: 0.8em;
+    line-height: 0.8em; }
+  .container-main-content-contact .header h1, .container-main-content-contact p {
+    margin: 1vh 0 0 0; }
+  .container-main-content-contact .submit-button {
+    margin: 0; } }

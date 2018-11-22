@@ -1,0 +1,54 @@
+@import '../../sass/mixins';
+@import '../../sass/_variables';
+
+
+.outer-container-fixtures {
+
+    .container-main-content-fixtures {
+        width: 75%;
+        margin: 14vh auto 10vh auto;
+
+        .container-card.fixtures-card {
+            padding-bottom: 3vh;
+
+            .main-header {
+                @include flex();
+                line-height: 0;
+                padding-bottom: 2vh;
+
+                &.displayResults {
+                    @include flex($justify-content: space-between);
+                    h1 { flex-basis: 54%; text-align: right;}
+                }
+            }
+
+        }
+        
+        .fixtures {
+            width: 100%;
+            margin-bottom: 2.5vh;
+            font-size: 85%;
+        }
+
+    }
+}
+
+.fixtures-date {
+    font-family: $font-family-date-of-fixtures;
+    font-size: $font-size-date-of-fixtures;
+    // background-color: $background-color-date-of-fixtures; 
+    background-color: lightgray; 
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 1vh;
+    padding: 1vh 1vw;
+    border-collapse: separate;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .container-main-content-fixtures {
+        width: 80%;
+    }
+
+}

@@ -1,0 +1,18 @@
+@import '../../sass/mixins';
+@import '../../sass/_variables';
+
+
+.container-main-content-about {
+    width: 90%;
+    margin: 15vh auto 0 auto;
+
+    .container {
+        display: flex;
+        > div { width: 45%; }
+        margin: 2vh 0;
+    
+        .container-inner {
+            margin-bottom: 2.5vh;
+        }
+    }
+}

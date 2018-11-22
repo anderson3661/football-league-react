@@ -1,0 +1,22 @@
+@import '../../sass/mixins';
+
+
+.container-main-content-team-stats {
+    width: 60%;
+    margin: 140px auto 100px auto;
+}
+
+.main-header-show-goals {
+    @include flex($justify-content: space-between);
+    margin-bottom: 10px;
+}
+
+// #myChart {
+//     width: 100%;
+//     margin-top: 75px;
+// }
+
+.container-team-stats-graph {
+    width: 100%;
+    margin: 6vh auto 1vh auto;
+}

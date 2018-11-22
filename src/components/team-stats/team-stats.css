@@ -1,0 +1,20 @@
+.container-main-content-team-stats {
+  width: 60%;
+  margin: 140px auto 100px auto; }
+
+.main-header-show-goals {
+  /* When calling the function use for example $justify-content: null to not use this property, otherwise it will use the default */
+  /* Safari */
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-justify-content: space-between;
+  -webkit-align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; }
+
+.container-team-stats-graph {
+  width: 100%;
+  margin: 6vh auto 1vh auto; }

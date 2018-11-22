@@ -1,0 +1,17 @@
+.container-home {
+  /* When calling the function use for example $justify-content: null to not use this property, otherwise it will use the default */
+  /* Safari */
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 14vh auto 10vh auto; }
+  .container-home .container-card {
+    width: 50%;
+    padding: 1vh 2vw 2vh 2vw; }
+    .container-home .container-card h1 {
+      margin-bottom: 3vh; }

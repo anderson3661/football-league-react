@@ -1,0 +1,10 @@
+.container-main-content-about {
+  width: 90%;
+  margin: 15vh auto 0 auto; }
+  .container-main-content-about .container {
+    display: flex;
+    margin: 2vh 0; }
+    .container-main-content-about .container > div {
+      width: 45%; }
+    .container-main-content-about .container .container-inner {
+      margin-bottom: 2.5vh; }

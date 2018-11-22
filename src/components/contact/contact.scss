@@ -1,0 +1,72 @@
+@import '../../sass/_mixins';
+@import '../../sass/_variables';
+
+
+.container-main-content-contact {
+    width: 75%;
+    margin: 15vh auto 0 auto;
+    @include flex($justify-content: null, $align-items: null);                           // Flex needs to be here, otherwise the Contact table shows with no white/gray background
+
+    //The main container-card css is in App.scss
+    .container-card {
+        width: 75%;
+        padding: 1vh 2vw 11vh 2vw;
+
+        header h1, p {
+            text-align: center;
+        }
+
+        .contact {
+            @include flex($align-items: null); 
+            align-content: flex-start;
+    
+            .main-form {
+                width: 65%;
+                max-height: 40vh;
+
+                .contact-form {
+                    width: 100%;
+                    margin: 2vh auto;
+
+                    .contact-form-full-width {
+                        width: 100%;
+                        padding: 2vh 0 0.5vh 0;
+                    }
+
+                    .errorMessage {
+                        color: red;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+
+                .submit-button {
+                    text-align: center;
+                    margin: 1vh 0;
+                }
+
+                .invalid-form-message p {
+                    color: $color-contact-form-invalid-message;
+                }
+            }
+        }
+    }
+
+    mat-form-field {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 700px) {
+    .container-main-content-contact {
+        mat-form-field {
+            font-size: 0.8em;
+            line-height: 0.8em;
+        }
+        
+        .header h1, p { margin: 1vh 0 0 0; }
+        
+        .submit-button { margin: 0; }
+    }
+}

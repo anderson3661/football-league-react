@@ -1,0 +1,158 @@
+@import '../../sass/mixins';
+@import '../../sass/_variables';
+
+
+.outer-container-administration {
+
+    .container-main-content-administration {
+        width: 85%;
+        margin: 14vh auto 8vh auto;
+
+        header {
+            display: flex;
+
+            h1 {
+                flex-basis: 75%;
+                text-align: center;
+                // margin-bottom: 3vh;
+                margin: 0.5vh 0;
+                padding: 0.5vh 0;
+            }
+
+            span { flex-basis: 25%; font-size: 80%; color: slategray;}
+        }
+        
+
+        .container-card {
+            padding: 0.5vh 1.5vw 1.5vh 1.5vw;
+        
+            .grid-season-info {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 3vw;
+            }
+
+            &.header {
+                width: 50%;
+                padding: 0 1vw;
+                margin-bottom: 3vh;
+                // background: rgba(255, 255, 255, 0.5);
+            }
+
+            &.buttons-card {
+                padding: 1vh 1vw;
+                background: rgba(255, 255, 255, 0.5);
+
+                #createFixtures:disabled {
+                    background-color: lightgray;
+                }
+            }
+        }
+
+        mat-radio-button {
+            margin: 0 1.5vw;
+        }
+
+        .dataStorage {
+            @include flex($justify-content: null);
+
+            .dataStorageLabel {
+                margin-right: 2vw;
+            }
+        }
+
+        .dataStorageButtons {
+            flex-direction: row;
+        }
+        
+        header {
+            @include flex($justify-content: space-around);
+        }
+        
+        .container-admin {
+            display: flex;
+            > div { width: 50%; }
+
+            table.admin-teams {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 1vh;
+                
+                .admin-team-number { width: 15%; text-align: center; }
+                .admin-team-team { width: 50%; text-align: left}
+                .admin-team-top-team { width: 15%; text-align: center}
+            
+                .teams-header { background-color: $background-color-admin-teams-header; }
+                .teams-header th { padding: 0.5vh 0.5vw; font-size: 90%;}
+            
+                .team-row input { width: 100%; padding: 0.1vh 0.25vw;}   
+            
+                td {
+                    border-bottom: 1px solid lightgray;
+                    padding: 0.5vh 0.5vw;
+
+                    &.admin-team-number { font-size: 80%; }
+                }
+            
+                input { color: #495057; }
+                
+                tbody tr:odd { background-color: gray; }
+            }
+        
+            .container-admin-factors {
+                margin: 0 0 0 5vw;
+                
+                > div { margin-bottom: 3vh; }
+                .buttons { text-align: center; }
+                .fullWidth {grid-column: 1 / span 2; }
+            }
+        }
+        
+        .form-control {
+            margin-top: 2.5vh;
+        }
+        
+        .form-control-long {
+            width: 100%;
+            margin-top: 2.5vh;
+        }
+        
+        mat-form-field {
+            font-size: 16px;
+        }
+        
+    }
+}
+
+@media all and (min-width: 1280px) {
+
+    // .container-admin-teams { max-width: 45%; }
+}
+
+@media all and (max-width: 1280px) {
+
+    // .container-admin > div { margin: 0 auto; }
+
+}
+
+@media all and (max-width: 1024px) {
+    .outer-container-administration {
+        .container-main-content-administration {
+            width: 90%;
+            .container-admin .container-admin-factors .buttons { @include flex($flex-direction: column); }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .outer-container-administration {
+        .container-main-content-administration {
+            .container-admin {
+                display: initial;
+                > div { width: 100%; margin: 0 auto; }
+                .container-admin-teams { width: 100%; margin-bottom: 3vh;}
+                .container-admin-factors { margin: 0; }
+            }
+        }
+    }
+}

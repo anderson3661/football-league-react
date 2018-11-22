@@ -1,0 +1,141 @@
+@import '../../sass/mixins';
+@import '../../sass/_variables';
+
+
+nav {
+
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+    
+    .main-heading {
+        color: $color-main-header;
+        font-size: $font-size-main-nav;
+        font-weight: bold;
+        margin: 0;
+        padding: 1vh 0;
+        background: $background-color-main-header;
+        text-align: left;
+        text-transform: uppercase;
+        border-bottom: 1px solid $color-main-nav-border-bottom;
+        display: flex;
+        justify-content: space-around;
+        z-index: 2;
+        // height: 3vh;
+    }
+    
+    .login-section {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .loggedInAs {
+        // font-size: 12px;
+        font-weight: normal;
+        text-transform: initial;
+        margin-top: 5px;
+        color: white;
+    }
+    
+    .login-buttons {
+        line-height: 0;
+        display: flex;
+        justify-content: center;
+        
+        button {
+            background-color: slategray;
+            color: #fff;
+            margin: 0 10px 0 0;
+
+            &:hover {
+                background-color: lighten(slategray, 10%);
+            }
+        }
+    }
+
+    .main-nav {
+        max-width: $max-width-main-nav;
+        margin: 0 auto;
+        // background: $background-color-main-nav;
+    }
+    
+    .sport {
+        color: $color-main-nav;
+        background-color: $background-color-main-nav;
+    }
+    
+    .individual-sport {
+        color: $color-individual-sport;
+        background-color: $background-color-individual-sport;
+    }
+    
+    .link-disabled {
+        color: darkgray;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        min-height: 3vh;
+
+        li {
+            display: inline-block;
+            // font-size: 1.1vw;
+            padding: 0.5vh 0.75vw;
+            border-right: 1px solid $color-nav-border-right;
+
+            &:hover { cursor: pointer; }
+            &:hover.link-disabled { cursor: default; }
+            &:first-child { padding-left: 0; }
+            &:last-child { border-right: none; }
+        }
+
+        li a:hover::after, .nav-child .nav-child-content a:hover::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $background-color-main-nav;
+        }
+
+        li.nav-child {
+            display: inline-block;
+        }
+
+        li a.nav-link:hover {
+            text-decoration: none;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: $background-color-active-link;
+            }
+        }
+        
+        .nav-child-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.603);
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,.2);
+            margin-top: 6px;
+
+            a {
+                display: block;
+                padding: 10px 6px;
+                min-height: 25px;
+
+                &:hover {
+                    background-color: black;
+                }
+            }
+        }
+        
+        .nav-child:hover .nav-child-content {
+            display: block;
+        }
+    }
+}

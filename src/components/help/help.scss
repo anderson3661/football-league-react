@@ -1,0 +1,86 @@
+@import '../../sass/mixins';
+@import '../../sass/_variables';
+
+
+.container-main-content-help {
+    width: 75%;
+    margin: 15vh auto 0 auto;
+    @include flex($justify-content: null, $align-items: null);                           // Flex needs to be here, otherwise the table shows with no white/gray background
+
+    .container-card {
+        width: 75%;
+        padding: 1vh 2vw 4vh 2vw;
+
+        header h1, p {
+            text-align: center;
+        }
+
+        .accordion {
+            position: relative;
+            display: block;
+            background-color: $background-color-accordian;
+            border: $border-accordian;
+            border-top: none;
+
+            .accordion__item {
+                display: block;
+
+                .accordion__trigger {
+                    text-decoration: none;
+                }
+
+                .accordion__title {
+                    position: relative;
+                    display: block;
+                    margin: 0;
+                    padding: 1vh 1vw;
+                    font-size: 1.2vw;
+                    background-color: $background-color-accordian-title;
+                    color: $color-accordian-title;
+                    border: $border-accordian-title;
+                    box-shadow: $box-shadow-accordian-title;
+
+                    &:hover {
+                        background-color: $background-color-accordian-title-hover;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        right: 2vw;
+                        width: 0.5vw;
+                        height: 0.5vw;
+                        border-left: $border-accordian-title-arrow;
+                        border-bottom: $border-accordian-title-arrow;
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                .accordion__content {
+                    display: block;
+                    padding: 0;
+                    height: 0;
+                    overflow: hidden;
+                    transition: height 0.5s ease, padding 0.3s linear;
+
+                    p {
+                        font-size: 1.0vw;
+                        text-align: left;
+                        padding: 2vh 2vw 0 2vw;
+                        margin: 0;
+
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+
+                    &:target {
+                        height: 20vh;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

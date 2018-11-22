@@ -1,0 +1,131 @@
+.outer-container-administration .container-main-content-administration {
+  width: 85%;
+  margin: 14vh auto 8vh auto; }
+  .outer-container-administration .container-main-content-administration header {
+    display: flex; }
+    .outer-container-administration .container-main-content-administration header h1 {
+      flex-basis: 75%;
+      text-align: center;
+      margin: 0.5vh 0;
+      padding: 0.5vh 0; }
+    .outer-container-administration .container-main-content-administration header span {
+      flex-basis: 25%;
+      font-size: 80%;
+      color: slategray; }
+  .outer-container-administration .container-main-content-administration .container-card {
+    padding: 0.5vh 1.5vw 1.5vh 1.5vw; }
+    .outer-container-administration .container-main-content-administration .container-card .grid-season-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 3vw; }
+    .outer-container-administration .container-main-content-administration .container-card.header {
+      width: 50%;
+      padding: 0 1vw;
+      margin-bottom: 3vh; }
+    .outer-container-administration .container-main-content-administration .container-card.buttons-card {
+      padding: 1vh 1vw;
+      background: rgba(255, 255, 255, 0.5); }
+      .outer-container-administration .container-main-content-administration .container-card.buttons-card #createFixtures:disabled {
+        background-color: lightgray; }
+  .outer-container-administration .container-main-content-administration mat-radio-button {
+    margin: 0 1.5vw; }
+  .outer-container-administration .container-main-content-administration .dataStorage {
+    /* When calling the function use for example $justify-content: null to not use this property, otherwise it will use the default */
+    /* Safari */
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .outer-container-administration .container-main-content-administration .dataStorage .dataStorageLabel {
+      margin-right: 2vw; }
+  .outer-container-administration .container-main-content-administration .dataStorageButtons {
+    flex-direction: row; }
+  .outer-container-administration .container-main-content-administration header {
+    /* When calling the function use for example $justify-content: null to not use this property, otherwise it will use the default */
+    /* Safari */
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-around;
+    -webkit-align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+  .outer-container-administration .container-main-content-administration .container-admin {
+    display: flex; }
+    .outer-container-administration .container-main-content-administration .container-admin > div {
+      width: 50%; }
+    .outer-container-administration .container-main-content-administration .container-admin table.admin-teams {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1vh; }
+      .outer-container-administration .container-main-content-administration .container-admin table.admin-teams .admin-team-number {
+        width: 15%;
+        text-align: center; }
+      .outer-container-administration .container-main-content-administration .container-admin table.admin-teams .admin-team-team {
+        width: 50%;
+        text-align: left; }
+      .outer-container-administration .container-main-content-administration .container-admin table.admin-teams .admin-team-top-team {
+        width: 15%;
+        text-align: center; }
+      .outer-container-administration .container-main-content-administration .container-admin table.admin-teams .teams-header {
+        background-color: #d5d7da; }
+      .outer-container-administration .container-main-content-administration .container-admin table.admin-teams .teams-header th {
+        padding: 0.5vh 0.5vw;
+        font-size: 90%; }
+      .outer-container-administration .container-main-content-administration .container-admin table.admin-teams .team-row input {
+        width: 100%;
+        padding: 0.1vh 0.25vw; }
+      .outer-container-administration .container-main-content-administration .container-admin table.admin-teams td {
+        border-bottom: 1px solid lightgray;
+        padding: 0.5vh 0.5vw; }
+        .outer-container-administration .container-main-content-administration .container-admin table.admin-teams td.admin-team-number {
+          font-size: 80%; }
+      .outer-container-administration .container-main-content-administration .container-admin table.admin-teams input {
+        color: #495057; }
+      .outer-container-administration .container-main-content-administration .container-admin table.admin-teams tbody tr:odd {
+        background-color: gray; }
+    .outer-container-administration .container-main-content-administration .container-admin .container-admin-factors {
+      margin: 0 0 0 5vw; }
+      .outer-container-administration .container-main-content-administration .container-admin .container-admin-factors > div {
+        margin-bottom: 3vh; }
+      .outer-container-administration .container-main-content-administration .container-admin .container-admin-factors .buttons {
+        text-align: center; }
+      .outer-container-administration .container-main-content-administration .container-admin .container-admin-factors .fullWidth {
+        grid-column: 1 / span 2; }
+  .outer-container-administration .container-main-content-administration .form-control {
+    margin-top: 2.5vh; }
+  .outer-container-administration .container-main-content-administration .form-control-long {
+    width: 100%;
+    margin-top: 2.5vh; }
+  .outer-container-administration .container-main-content-administration mat-form-field {
+    font-size: 16px; }
+
+@media all and (max-width: 1024px) {
+  .outer-container-administration .container-main-content-administration {
+    width: 90%; }
+    .outer-container-administration .container-main-content-administration .container-admin .container-admin-factors .buttons {
+      /* When calling the function use for example $justify-content: null to not use this property, otherwise it will use the default */
+      /* Safari */
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
+
+@media all and (max-width: 768px) {
+  .outer-container-administration .container-main-content-administration .container-admin {
+    display: initial; }
+    .outer-container-administration .container-main-content-administration .container-admin > div {
+      width: 100%;
+      margin: 0 auto; }
+    .outer-container-administration .container-main-content-administration .container-admin .container-admin-teams {
+      width: 100%;
+      margin-bottom: 3vh; }
+    .outer-container-administration .container-main-content-administration .container-admin .container-admin-factors {
+      margin: 0; } }
