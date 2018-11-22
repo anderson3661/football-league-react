@@ -4,6 +4,8 @@ This app was inspired by my love of web development, football and statistics.
 
 It is written using React 16.4 and uses React Router and Redux.
 
+NOTE - a couple of files containing the defaults have been excluded from Github so that the majority of the code can be viewed but the app won't work by cloning or downloading.
+
 It allows you to play through a season's fixtures for a football league (e.g. English Premier League).
 The way it works is that for each minute of each fixture a random number is generated and if that number is within a certain tolerance then a goal is scored.
 You start by entering teams and various factors on the <span>Administration</span> page.
