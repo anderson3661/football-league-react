@@ -21,7 +21,8 @@ const Routes = () => {
             <Route exact path="/tables" render={(props) => <Tables {...props.appData} />} />
             <Route exact path="/tables/full" render={(props) => <Tables {...props.appData} tableTypeFull={true} />} />
             <Route exact path="/teamstats/:teamName" render={(props) => <TeamStats {...props} />} />
-            <Route path="/administration" render={(props) => <Administration appData={props.appData} onNumberOfFixturesForSeasonChange={this.handleNumberOfFixturesForSeasonChange} />} />
+            {/* <Route path="/administration" render={(props) => <Administration appData={props.appData} onNumberOfFixturesForSeasonChange={this.handleNumberOfFixturesForSeasonChange} />} /> */}
+            <Route path="/administration" render={(props) => <Administration appData={props.appData} />} />
             <Route path="/help" component={Help} />
             <Route path="/contact" component={Contact} />
             <Route path="/about" component={About} />

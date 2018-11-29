@@ -1,6 +1,6 @@
 import React from "react";
 
-import Chart from "react-apexcharts";
+// import Chart from "react-apexcharts";
 
 // import {PLAYERS_ARRAY, OOM_ROUNDS} from '../../utilities/constants';
 
@@ -82,12 +82,12 @@ class TeamStatsApexChart extends React.Component {
             <div className="container-team-stats-graph">
                 <div className="container-team-stats-graph-row">
                     <div className="container-team-stats-graph-mixed-chart">
-                        <Chart
+                        {/* <Chart
                             options={this.state.options}
                             series={this.state.series}
                             type="line"
                             width="100%"
-                        />
+                        /> */}
                     </div>
                 </div>
             </div>

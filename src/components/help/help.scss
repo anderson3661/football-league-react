@@ -8,7 +8,7 @@
     @include flex($justify-content: null, $align-items: null);                           // Flex needs to be here, otherwise the table shows with no white/gray background
 
     .container-card {
-        width: 75%;
+        width: 100%;
         padding: 1vh 2vw 4vh 2vw;
 
         header h1, p {
@@ -34,7 +34,7 @@
                     display: block;
                     margin: 0;
                     padding: 1vh 1vw;
-                    font-size: 1.2vw;
+                    // font-size: 1.2vw;
                     background-color: $background-color-accordian-title;
                     color: $color-accordian-title;
                     border: $border-accordian-title;
@@ -64,7 +64,7 @@
                     transition: height 0.5s ease, padding 0.3s linear;
 
                     p {
-                        font-size: 1.0vw;
+                        // font-size: 1.0vw;
                         text-align: left;
                         padding: 2vh 2vw 0 2vw;
                         margin: 0;
@@ -83,4 +83,13 @@
 
     }
 
+}
+
+
+@media screen and (max-width: 1024px) {
+    .container-main-content-help {
+        width: 90%;
+        margin: 15vh auto 25vh auto;
+        .container-card .accordion .accordion__item .accordion__content { &:target { height: 30vh; } }
+    }
 }

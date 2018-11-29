@@ -3,13 +3,13 @@
 
 
 .container-main-content-contact {
-    width: 75%;
+    width: 70%;
     margin: 15vh auto 0 auto;
     @include flex($justify-content: null, $align-items: null);                           // Flex needs to be here, otherwise the Contact table shows with no white/gray background
 
     //The main container-card css is in App.scss
     .container-card {
-        width: 75%;
+        width: 100%;
         padding: 1vh 2vw 11vh 2vw;
 
         header h1, p {
@@ -58,7 +58,7 @@
     }
 }
 
-@media screen and (max-width: 1280px) and (min-width: 700px) {
+@media screen and (max-width: 1280px) {
     .container-main-content-contact {
         mat-form-field {
             font-size: 0.8em;
@@ -69,4 +69,8 @@
         
         .submit-button { margin: 0; }
     }
+}
+
+@media screen and (max-width: 768px) {
+    .container-main-content-contact { width: 90%; }
 }

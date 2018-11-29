@@ -18,21 +18,22 @@ export function getPositionInTable(teamsForSeason, setOfFixtures, table, teamNam
 
             teamIndex = helpers.getPositionInArrayOfObjects(table, "teamName", (homeOrAwayCounter === HOME_TEAM) ? homeTeam : awayTeam);
 
+            debugger;
             team = table[teamIndex];
 
             team.played = team.played + 1;
 
-            team.won = team.won;
-            team.drawn = team.drawn;
-            team.lost = team.lost;
+            // team.won = team.won;
+            // team.drawn = team.drawn;
+            // team.lost = team.lost;
 
-            team.points = team.points;
+            // team.points = team.points;
 
             if (homeOrAwayCounter === HOME_TEAM) {
 
-                team.homeWon = team.homeWon;
-                team.homeDrawn = team.homeDrawn;
-                team.homeLost = team.homeLost;
+                // team.homeWon = team.homeWon;
+                // team.homeDrawn = team.homeDrawn;
+                // team.homeLost = team.homeLost;
 
                 if (homeTeamsScore > awayTeamsScore) {
                     team.homeWon++;
@@ -51,17 +52,17 @@ export function getPositionInTable(teamsForSeason, setOfFixtures, table, teamNam
                     team.lost++;
                 }
 
-                team.goalsFor = team.goalsFor + homeTeamsScore;
-                team.goalsAgainst = team.goalsAgainst + awayTeamsScore;
-                team.homeGoalsFor = team.homeGoalsFor + homeTeamsScore;
-                team.homeGoalsAgainst = team.homeGoalsAgainst + awayTeamsScore;
-                team.goalDifference = team.goalDifference + homeTeamsScore - awayTeamsScore;
+                team.goalsFor += homeTeamsScore;
+                team.goalsAgainst += awayTeamsScore;
+                team.homeGoalsFor += homeTeamsScore;
+                team.homeGoalsAgainst += awayTeamsScore;
+                team.goalDifference += homeTeamsScore - awayTeamsScore;
 
             } else {
 
-                team.awayWon = team.awayWon;
-                team.awayDrawn = team.awayDrawn;
-                team.awayLost = team.awayLost;
+                // team.awayWon = team.awayWon;
+                // team.awayDrawn = team.awayDrawn;
+                // team.awayLost = team.awayLost;
 
                 if (awayTeamsScore > homeTeamsScore) {
                     team.awayWon++;
@@ -80,11 +81,11 @@ export function getPositionInTable(teamsForSeason, setOfFixtures, table, teamNam
                     team.lost++;
                 }
 
-                team.goalsFor = team.goalsFor + awayTeamsScore;
-                team.goalsAgainst = team.goalsAgainst + homeTeamsScore;
-                team.awayGoalsFor = team.awayGoalsFor + awayTeamsScore;
-                team.awayGoalsAgainst = team.awayGoalsAgainst + homeTeamsScore;
-                team.goalDifference = team.goalDifference + awayTeamsScore - homeTeamsScore;
+                team.goalsFor += awayTeamsScore;
+                team.goalsAgainst += homeTeamsScore;
+                team.awayGoalsFor += awayTeamsScore;
+                team.awayGoalsAgainst += homeTeamsScore;
+                team.goalDifference += awayTeamsScore - homeTeamsScore;
             }
 
         }

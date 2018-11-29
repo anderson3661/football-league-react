@@ -45,10 +45,12 @@
     border-collapse: separate;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     
-    .container-main-content-fixtures {
-        width: 80%;
+    .outer-container-fixtures {
+        .container-main-content-fixtures {
+            width: 90%;
+        }
     }
 
 }

@@ -2,8 +2,12 @@
     width: 85%;
     margin: 13vh auto 10vh auto;
 
-    .container-card.header {
-        width: 100%;
+    &.show-goal-updates {
+        width: 90%;
+    }
+
+    .container-card.latest-fixtures-header {
+        // width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -16,12 +20,18 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1;
-        grid-column-gap: 8vw;
+        grid-column-gap: 5vw;
 
-        .container-card.fixtures, .container-card.in-play-updates, .container-card.table { width: 100%;}
+        // .container-card.fixtures, .container-card.in-play-updates, .container-card.table { width: 100%;}
+        .container-card.fixtures, .container-card.in-play-updates, .container-card.table { margin: unset;}
+        .container-card.table-repeat { display: none; }
 
         .fixtures.in-play {
             font-size: 90%;
+
+            .fixtures-row.timeOrScore { flex-basis: 7vmax; }
+            .teamsGoalTimes { font-size: 90% }
+            .minutesPlayed { font-size: 90%; flex-basis: 7vmax; }
         }
     
         &.show-goal-updates {
@@ -65,13 +75,32 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+.container-main-content-latest-fixtures.show-goal-updates {
+    width: 90%;
+    .split-grid {
+        grid-column-gap: 2vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
     .container-main-content-latest-fixtures {
-        width: 90%;
+        .container-card.latest-fixtures-header {
+            flex-wrap: wrap;
+            h1 { flex-basis: 50%; text-align: left; };
+            .fixture-update-button { flex-basis: 50%; order: 3; }
+            .fixture-update-interval { flex-basis: 50%; order: 4; }
+            .showGoalUpdates { flex-basis: 50% }
+        }
         .split-grid {
-            grid-column-gap: 3vw;
             &.show-goal-updates {
-                .fixtures.in-play-updates p { font-size: 60% }
+                grid-template-columns: minmax(400px, 1fr) 1fr;
+                grid-row-gap: 3vh;
+                .container-card.fixtures { order: 3; }
+                .container-card.in-play-updates{ order: 1; }
+                .container-card.table { order: 2; }
+                .container-card.table-repeat { order: 4; }
+                .container-card.table-repeat { display: block; margin: 0 }
+                .fixtures.in-play-updates p { font-size: 80% }
             }
         }
     }
@@ -87,28 +116,15 @@
         .split-grid {
             grid-template-columns: 1fr;
             grid-column-gap: 0;
+            grid-row-gap: 3vh;
+            &.show-goal-updates {
+                grid-template-columns: 1fr;
+                .container-card.fixtures { order: 2; }
+                .container-card.in-play-updates{ order: 1; }
+                .container-card.table { order: 3; }
+                .container-card.table-repeat { display: none }
+                .fixtures.in-play-updates p { font-size: 80% }
+            }
         }
     }
 }
-
-// .fixtures-latest {
-//     grid-column: 1;
-//     grid-row: 1;
-// }
-
-// .league-table-latest {
-//     grid-column: 2;
-//     grid-row: 1;
-// }
-
-// .button-and-interval {
-//     display: flex;
-//     justify-content: space-between;
-    
-//     .fixture-update-interval { flex-basis: 50% }
-// }
-
-
-// #startSetOfFixtures {
-    // margin-bottom: 2vh;
-// }

@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 
 import Top3 from './top3';
 
-import "./fixture-row.css";
+import "./fixture-row.scss";
 
 const FixtureRow = (props) => {
     // console.log('FixtureRow props: ', props);

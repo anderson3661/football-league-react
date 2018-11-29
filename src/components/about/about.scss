@@ -13,6 +13,26 @@
     
         .container-inner {
             margin-bottom: 2.5vh;
+
+            .container-card {
+                ul li a {
+                    color: blue;
+
+                    &:hover { text-decoration: underline }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container-main-content-about {
+        .container-card.header { width: 50%; margin-bottom: 2vh; }
+        .container {
+            flex-direction: column;
+            align-items: center;
+            .container-card { width: 90% }
+            .container-inner { width: 100%; padding: 1vh 0; }
         }
     }
 }

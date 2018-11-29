@@ -139,3 +139,57 @@ nav {
         }
     }
 }
+
+.side-nav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+
+    a {
+        padding: 10px 10px 10px 30px;
+        text-decoration: none;
+        color: #ccc;
+        display: block;
+        font-size: 16px;
+        transition: 1.3s;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 0;
+        right: 22px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+}
+
+#main {
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+    transition: margin-left 0.5s;
+}
+
+@media screen and (max-width:1024px) {
+    .tables-full {display: none;}
+}
+
+@media screen and (max-width:650px) {
+    .navbar-nav {display: none};
+}
+
+@media screen and (min-width:650px) {
+    .open-slide {display: none};
+}

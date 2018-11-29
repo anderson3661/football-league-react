@@ -10,7 +10,7 @@ import { MAIN_BACKGROUND_IMAGE } from '../../utilities/constants';
 
 import * as helpers from '../../utilities/helper-functions/helpers';
 
-import '../../utilities/css/tables.css';
+import '../../utilities/css/tables.scss';
 
 library.add(faArrowUp, faArrowDown);
 
@@ -55,7 +55,7 @@ let Tables = (props) => {
 
                 {table.map((team, i) => {
                     return (
-                        <tr key={i} className="league-table-row">
+                        <tr key={team.teamName} className="league-table-row">
                             <td className="league-table-position">{i + 1}</td>
 
                             {tableTypeLatestFixtures &&

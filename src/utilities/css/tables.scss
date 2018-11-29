@@ -57,7 +57,7 @@
     .league-table-row td { padding-top: 0.8vh; padding-bottom: 0.8vh; }
     .league-table-position { @include table-column(3%, inherit, left, 0, 0); }
     // .league-table-movement { @include table-column(4%, normal, left, 0, 0); }
-    .league-table-teamName { @include table-column(20%, bold, left, 0, 0); }
+    .league-table-teamName { @include table-column(null, bold, left, 0, 0); }
     .league-table-played { @include table-column(4%, inherit, right, 0, 0); }
     .league-table-won { @include table-column(5%, inherit, right, 3vw, 0); }
     .league-table-drawn { @include table-column(5%, inherit, right, 0, 0); }
@@ -80,7 +80,7 @@
     .league-table-row td { padding-top: 0.8vh; padding-bottom: 0.8vh; }
     .league-table-position { @include table-column(3%, inherit, left, 0, 0); }
     // .league-table-movement { @include table-column(1%, normal, left, 0, 0); }
-    .league-table-teamName { @include table-column(18%, bold, left, 0, 0); }
+    .league-table-teamName { @include table-column(null, bold, left, 0, 0); }
     .league-table-played { @include table-column(3%, inherit, right, 0, 0); }
     .league-table-won { @include table-column(3%, inherit, right, 3vw, 0); }
     .league-table-drawn { @include table-column(3%, inherit, right, 0, 0); }
@@ -137,16 +137,28 @@
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 900px) {
+    .league-table, .league-table-full {
+        .league-table-goalsFor { display: none; }
+        .league-table-goalsAgainst { display: none; }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .league-table, .league-table-full {
+        .league-table-form-cell { display: none; }
+        .league-table-form-header { display: none; }
+    }
+}
+
+@media screen and (max-width: 500px) {
     .league-table, .league-table-full {
         .league-table-teamName { width: 50%; padding-left: 2vw; }
         .league-table-drawn { display: none; }
         .league-table-lost { display: none; }
-        .league-table-goalsFor { display: none; }
-        .league-table-goalsAgainst { display: none; }
         .league-table-points { padding-left: 2vw; }
-        .league-table-form-cell { display: none; }
-        .league-table-form-header { display: none; }
+        // .league-table-form-cell { display: none; }
+        // .league-table-form-header { display: none; }
     }
 
     .league-table-full {

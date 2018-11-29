@@ -15,8 +15,8 @@ import * as helpers from '../../utilities/helper-functions/helpers';
 import {Fixture} from '../../utilities/classes/fixture';
 import { MAIN_BACKGROUND_IMAGE } from '../../utilities/constants';
 
-import '../../utilities/css/fixtures.css';
-import './fixtures-latest.css';
+import '../../utilities/css/fixtures.scss';
+import './fixtures-latest.scss';
 
 const PAUSE_FIXTURES = "Pause Fixtures";
 const START_FIXTURES = "Start Fixtures";
@@ -279,25 +279,27 @@ class FixturesLatest extends Component {
     render() {
 
         return (            
-            <div className="container-main-content-latest-fixtures">
+            <div className={`container-main-content-latest-fixtures ${this.state.showGoalUpdates ? "show-goal-updates" : ""}`}>
                 <img className="full-screen-background-image" src={MAIN_BACKGROUND_IMAGE} alt=""></img>
 
                 <Prompt when={this.state.areFixturesInPlayForRouter} message="Are you sure you want to abandon these fixtures ?"/>
 
-                <div className="container-card header">
+                <div className="container-card latest-fixtures-header">
                     <h1>{ this.displayHeader }</h1>
 
                     {this.haveSeasonsFixturesBeenCreated && !this.hasSeasonFinished &&
                         <Fragment>
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                id="startSetOfFixtures"
-                                onClick={this.startSetOfFixtures}
-                                value={this.state.startFixturesButtonText}
-                                disabled={!this.authenticated || !this.state.startFixturesButtonEnabled}
-                                >{this.state.startFixturesButtonText}
-                            </Button>
+                            <div className="fixture-update-button">
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    id="startSetOfFixtures"
+                                    onClick={this.startSetOfFixtures}
+                                    value={this.state.startFixturesButtonText}
+                                    disabled={!this.authenticated || !this.state.startFixturesButtonEnabled}
+                                    >{this.state.startFixturesButtonText}
+                                </Button>
+                            </div>
 
                             <div className="fixture-update-interval">
                                 <TextField
@@ -306,6 +308,7 @@ class FixturesLatest extends Component {
                                     placeholder="e.g. 0.5"
                                     className="form-control"
                                     fullWidth
+                                    disabled={this.state.areFixturesInPlayForRouter && !this.state.haveFixturesBeenPaused}
                                     value={this.state[FIXTURE_UPDATE_INTERVAL]}
                                     onChange={this.handleChangeFixtureUpdateInterval(FIXTURE_UPDATE_INTERVAL)}
                                 />
@@ -378,6 +381,18 @@ class FixturesLatest extends Component {
                                 showGoalUpdates={this.state.showGoalUpdates}
                             />
                         </div>
+
+                        {this.state.showGoalUpdates &&
+                            <div className="container-card table-repeat">
+                                <Tables
+                                    {...this.appData}
+                                    tableTypeLatestFixtures={true}
+                                    tableDuringLatestFixtures={this.state.tableInPlay}
+                                    tableBeforeLatestFixtures={this.tableBeforeFixtures}
+                                    showGoalUpdates={this.state.showGoalUpdates}
+                                />
+                            </div>
+                        }
                     </div>
                 )}
             </div>

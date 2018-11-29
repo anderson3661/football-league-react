@@ -2,7 +2,7 @@ import React from 'react';
 
 import { MAIN_BACKGROUND_IMAGE } from '../../utilities/constants';
 
-import './home.css';
+import './home.scss';
 
 
 const Home = () => {

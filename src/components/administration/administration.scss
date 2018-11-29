@@ -139,6 +139,10 @@
     .outer-container-administration {
         .container-main-content-administration {
             width: 90%;
+            header {
+                flex-direction: column;
+                span { padding-bottom: 1vh; }
+            }
             .container-admin .container-admin-factors .buttons { @include flex($flex-direction: column); }
         }
     }

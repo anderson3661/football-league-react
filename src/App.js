@@ -8,7 +8,7 @@ import Footer from './components/nav/footer';
 import Routes from './components/nav/routes';
 import { appLoadInitialData } from './redux/actions';
 
-import './App.css';
+import './App.scss';
 
 class App extends Component {
 

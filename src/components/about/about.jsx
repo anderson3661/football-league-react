@@ -2,7 +2,7 @@ import React from "react";
 
 import { MAIN_BACKGROUND_IMAGE, HOSTING_SITE } from '../../utilities/constants';
 
-import "./about.css";
+import "./about.scss";
 
 const About = () => {
 

@@ -3,7 +3,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 import { MAIN_BACKGROUND_IMAGE } from '../../utilities/constants';
 
-import './help.css';
+import './help.scss';
 
 const dataHelp = [
     {

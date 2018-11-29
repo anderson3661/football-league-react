@@ -20,7 +20,7 @@ import FormControl from '@material-ui/core/FormControl';
 import ConfirmationDialog from '../dialogs/confirmationDialog';
 import ConfirmationYesNo from '../dialogs/confirmYesNo';
 
-import "./administration.css";
+import "./administration.scss";
 
 const SEASON = 'season';
 const SEASON_START_DATE = 'seasonStartDate';
@@ -68,9 +68,6 @@ class Administration extends Component {
         };
 
         this.updateOriginalValues();
-
-        this.handleTeamsInputChange = this.handleTeamsInputChange.bind(this);
-        this.handleIsATopTeamInputChange = this.handleIsATopTeamInputChange.bind(this);
     }
 
     updateOriginalValues = () => {
@@ -81,11 +78,10 @@ class Administration extends Component {
 
     updateHaveChangesBeenMade = () => {
 
-        console.log('state',this.state);
-        console.log('originalValues',this.originalValues);
+        // console.log('state',this.state);
+        // console.log('originalValues',this.originalValues);
 
         let {teams} = this.state;
-        debugger;
 
         for (let i = 0; i < teams.length; i++) {
             if (teams[i].teamName !== this.originalValuesTeams[i].teamName || teams[i].isATopTeam !== this.originalValuesTeams[i].isATopTeam) {
@@ -154,7 +150,7 @@ class Administration extends Component {
     }
     
     handleSaveChanges = (e) => {
-        console.log(this.state);
+        // console.log(this.state);
         
         e.preventDefault();
         
@@ -237,10 +233,6 @@ class Administration extends Component {
 
     handleDialogConfirmCloseResetApp = () => {
         this.setState({ dialogResetAppConfirmIsOpen: false })
-    }
-
-    componentDidMount() {
-        console.log('componentDidMount');
     }
 
     validateAdmin = () => {

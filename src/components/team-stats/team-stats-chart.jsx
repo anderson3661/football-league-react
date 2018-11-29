@@ -2,7 +2,7 @@ import React from "react";
 
 import {Line} from 'react-chartjs-2';
 
-import "./team-stats.css";
+import "./team-stats.scss";
 
 class TeamStatsChart extends React.Component {
 

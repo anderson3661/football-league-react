@@ -9,8 +9,8 @@ import FixtureRow from "../fixture-row";
 
 import * as helpers from './helpers';
 
-import "../../utilities/css/fixtures.css";
-import "./team-stats.css";
+import "../../utilities/css/fixtures.scss";
+import "./team-stats.scss";
 
 class TeamStats extends Component {
 
@@ -48,6 +48,8 @@ class TeamStats extends Component {
         this.table = [];
 
         teamsForSeason = props.appData.teamsForSeason;
+
+        debugger;
 
         this.fixturesForSeason.forEach((setOfFixtures) => {
             for (let fixture of setOfFixtures.fixtures) {

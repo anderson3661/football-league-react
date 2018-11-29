@@ -3,12 +3,12 @@
 
 .container-main-content-team-stats {
     width: 60%;
-    margin: 140px auto 100px auto;
+    margin: 14vh auto 8vh auto;
 }
 
 .main-header-show-goals {
     @include flex($justify-content: space-between);
-    margin-bottom: 10px;
+    margin-bottom: 1vh;
 }
 
 // #myChart {
@@ -19,4 +19,10 @@
 .container-team-stats-graph {
     width: 100%;
     margin: 6vh auto 1vh auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .container-main-content-team-stats {
+        width: 90%;
+    }
 }

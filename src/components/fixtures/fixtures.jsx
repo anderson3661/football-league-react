@@ -9,7 +9,7 @@ import * as helpers from '../../utilities/helper-functions/helpers';
 
 import { MAIN_BACKGROUND_IMAGE } from '../../utilities/constants';
 
-import "../../utilities/css/fixtures.css";
+import "../../utilities/css/fixtures.scss";
 
 class Fixtures extends Component {
 
