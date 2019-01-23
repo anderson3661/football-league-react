@@ -93,16 +93,16 @@
         padding-bottom: 0.25vh;
     }
     
-    // .teamsGoalTimes.home { text-align: right; padding-right: 1.5vw; }
-    .teamsGoalTimes.home { text-align: right }
-    // .teamsGoalTimes.away { text-align: left; padding-left: 1.5vw; }
-    .teamsGoalTimes.away { text-align: left }
+    // .teamsGoalTimes.home { text-align: right; padding-right: 0.25vw; }
+    .teamsGoalTimes.home { text-align: right; }
+    // .teamsGoalTimes.away { text-align: left; padding-left: 0.25vw; }
+    .teamsGoalTimes.away { text-align: left;  }
 
     .minutesPlayed {
         // flex-basis: $width-fixture-row-goal-times-minutes-played;
         text-align: center;
         padding: 0 0.5vw;
-        min-width: 60px;
+        min-width: 75px;
     }
 
     &.team-stats {
