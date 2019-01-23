@@ -15,8 +15,8 @@
         // padding-bottom: 0.8vh;
         @include flex($justify-content: null);
     }
-    .homeTeamsName { @extend %teamName; text-align: right; padding-right: 0.5vw; justify-content: flex-end; }
-    .awayTeamsName { @extend %teamName; text-align: left;  padding-left: 0.5vw; justify-content: flex-start; }
+    .homeTeamsName { @extend %teamName; text-align: right; padding-right: 0.75vw; justify-content: flex-end; }
+    .awayTeamsName { @extend %teamName; text-align: left;  padding-left: 0.75vw; justify-content: flex-start; }
 
     %teamScore { flex-basis: $width-fixture-row-team-score; }
     .homeTeamsScore { @extend %teamScore; padding-right: 0; }
@@ -24,7 +24,7 @@
     
     .timeOrScore {
         @include flex($align-items: null);
-        flex-basis: $width-fixture-time-or-score;
+        // flex-basis: $width-fixture-time-or-score;
         text-align: center;
         padding-top: 0.7vh;
         padding-bottom: 0.7vh;
@@ -35,11 +35,13 @@
         }
 
         &.scoresOnly {
-            justify-content: space-evenly;
+            -webkit-justify-content: space-around;
+            justify-content: space-around;
         }    
     }
        
     .finalScore { @include score($color-final-score, $background-color-final-score); }
+    .filler { width: 3px;}
 
     &.show-goals-hide-border-bottom {
         border-bottom: none;        // Hioe the main bottom border if show goals is selected and the fixture has finished
@@ -91,13 +93,16 @@
         padding-bottom: 0.25vh;
     }
     
-    .teamsGoalTimes.home { text-align: right; padding-right: 0.25vw; }
-    .teamsGoalTimes.away { text-align: left; padding-left: 0.25vw; }
+    // .teamsGoalTimes.home { text-align: right; padding-right: 1.5vw; }
+    .teamsGoalTimes.home { text-align: right }
+    // .teamsGoalTimes.away { text-align: left; padding-left: 1.5vw; }
+    .teamsGoalTimes.away { text-align: left }
 
     .minutesPlayed {
-        flex-basis: $width-fixture-row-goal-times-minutes-played;
+        // flex-basis: $width-fixture-row-goal-times-minutes-played;
         text-align: center;
         padding: 0 0.5vw;
+        min-width: 60px;
     }
 
     &.team-stats {

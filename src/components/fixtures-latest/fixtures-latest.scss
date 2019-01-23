@@ -26,12 +26,17 @@
         .container-card.fixtures, .container-card.in-play-updates, .container-card.table { margin: unset;}
         .container-card.table-repeat { display: none; }
 
-        .fixtures.in-play {
-            font-size: 90%;
+        .container-card.fixtures {
+            .fixtures.in-play {
+                font-size: 90%;
 
-            .fixtures-row.timeOrScore { flex-basis: 7vmax; }
-            .teamsGoalTimes { font-size: 90% }
-            .minutesPlayed { font-size: 90%; flex-basis: 7vmax; }
+                .fixtures-row.timeOrScore { flex-basis: 7vmax; }
+                .teamsGoalTimes { font-size: 90% }
+                // .minutesPlayed { font-size: 90%; flex-basis: 7vmax; }
+                .minutesPlayed { font-size: 90%; min-width: 60px; }
+                // .fixtures-row-goal-times.teamsGoalTimes.home { padding-right: 0; }
+                // .fixtures-row-goal-times.teamsGoalTimes.away { padding-left: 0; }
+            }
         }
     
         &.show-goal-updates {
@@ -59,12 +64,12 @@
                     span.mins {
                         margin-right: 0.5vw;
                         padding: 0.5vh 0.25vw;
-                        background-color: rgb(241, 239, 239);
+                        background-color: lightgray;
                     }
-            
-                    span.team.goal {
-                        font-weight: 700;
-                    }
+
+                    span { font-weight: normal; }
+                    span.team.goal { font-weight: 700; }
+
                   }
                   
                   @keyframes type { 

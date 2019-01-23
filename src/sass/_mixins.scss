@@ -23,8 +23,8 @@
 @mixin score($color-score, $background-color-score) {
     color: $color-score;
     background-color: $background-color-score;
-    flex-basis: $width-fixture-row-team-score;
-    padding: 5px;
+    // flex-basis: $width-fixture-row-team-score;
+    padding: 0.5vh 0.5vw;
 }
 
 @mixin table-column($width, $fontWeight, $textAlign, $paddingLeft, $paddingRight) {

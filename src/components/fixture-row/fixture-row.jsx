@@ -54,6 +54,7 @@ const FixtureRow = (props) => {
                     {!showForLatestFixtures && hasFixtureFinished && (
                         <Fragment>
                             <span className="finalScore">{ homeTeamsScore }</span>
+                            <span className="filler">&nbsp;</span>
                             <span className="finalScore">{ awayTeamsScore }</span>
                         </Fragment>
                     )}
@@ -68,6 +69,8 @@ const FixtureRow = (props) => {
                                 `}>
                                 { homeTeamsScore }
                             </span>
+
+                            <span className="filler">&nbsp;</span>
 
                             <span className=
                                 {`awayTeamsScore 

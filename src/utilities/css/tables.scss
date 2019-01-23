@@ -125,7 +125,7 @@
 
 
 // .arrow-up, .arrow-down { font-size: 18px; font-weight: bold; height: 2vh; line-height: 0.8em;}
-.arrow-up, .arrow-down { font-size: 1.1vw; font-weight: bold; line-height: 0.8em;}
+.arrow-up, .arrow-down { font-size: 110%; font-weight: bold; line-height: 0.8em;}
 .arrow-up { color: $color-league-table-movement-arrow-up; }
 .arrow-down { color: $color-league-table-movement-arrow-down; }
 
@@ -138,6 +138,7 @@
 
 
 @media screen and (max-width: 900px) {
+    .container-main-content-tables { margin-top: 25vh }
     .league-table, .league-table-full {
         .league-table-goalsFor { display: none; }
         .league-table-goalsAgainst { display: none; }
